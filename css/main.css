@@ -63,6 +63,9 @@ header{
     font-family: 'Noto Sans KR', sans-serif;
     position:relative;
 }
+    #logo{
+        cursor: pointer;
+    }
     #bottom_menu{
         width:50%;
         display:flex; justify-content: center; align-items: center;
