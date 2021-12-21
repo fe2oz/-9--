@@ -5,7 +5,7 @@ header{
 }
 
 #backg{
-    width:100%; height:6.5vh;
+    width:100%; height:6.1vh;
     background-color:#048195;
     position:absolute; top:0; z-index:1;
 }
@@ -17,7 +17,7 @@ header{
     display:none;
 }
 #the_top{
-    width:66.7%; height:6.5vh;
+    width:66.7%; height:6.1vh;
     display:flex; justify-content: space-between;
     margin:0 auto;
     background-color:#048195;
@@ -40,6 +40,7 @@ header{
         font-family: 'Noto Sans KR', sans-serif; font-size:0.7vw;
         color:white; 
         padding-right:14%;
+        letter-spacing: -1px;
     }
 
 #the_top_search{
@@ -159,9 +160,15 @@ header{
         #change_court_image{
             width:100%; height:38vh;
         }
-        #img_slide_text{
+        #sb1 > p,
+        #sb2 > p,
+        #sb3 > p,
+        #sb4 > p,
+        #sb5 > p,
+        #sb6 > p,
+        #sb7 > p{
             width:98%;
-            position:absolute; bottom:0;
+            position:absolute; bottom:1.2%;
             font-family: 'RIDIBatang'; font-size:1.2vw;
             color:white;
             background:rgba(0, 0, 0, 0.5);
@@ -174,12 +181,14 @@ header{
             display:flex; justify-content: space-evenly; align-items: center;
             background-color:#595959;
             border:1px solid black;
+            position:absolute; right:1%; bottom:2.5%;
         }
         #img_slide_text > div > span{
             height:2.5vh;
             line-height:2.5vh;
             font-size:0.8vw; font-family: 'Pretendard-Regular';
             cursor: pointer;
+            color:white;
         }
         #img_slide_text > div > span:nth-of-type(1){
             border-right:1px solid #484848;
@@ -286,7 +295,7 @@ header{
             display:flex; justify-content: space-evenly; align-items: center;
             background-color:#595959;
             border:1px solid black;
-            position:absolute; bottom:1.9%; right:0;
+            position:absolute; bottom:1.9%; right:3%;
         }
         #two_slide > div > span{
             height:2.5vh;
@@ -316,9 +325,9 @@ header{
         display:flex; justify-content: center;
     }
     #plus{
-        width:2vw;
+        width:1.3vw;
         border:1px solid lightgray;
-        margin-right:2%;
+        margin-right:8%;
         cursor: pointer;
     }
 /* 새소식 */
@@ -333,11 +342,34 @@ header{
         #news_menu p{
             font-family: 'YeolrinGothic-Light'; font-size:1.3vw; font-weight: bold;
             margin-left:2%;
+            padding-top:3%;
         }
     #news_infor{
         height:30vh; 
-        background-color: olive;
+        display: flex; align-items: center;
     }
+        #news_infor > div:nth-of-type(1){
+            width:70%;
+            padding-left:2%;
+        }
+        #news_infor > div:nth-of-type(2){
+            width:20%;
+            display:flex; flex-flow:column wrap; align-items: flex-end;
+        }
+        #news_infor p{
+            width:100%; height:4vh;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color:#555;
+            cursor: pointer;
+            font-family: 'YeolrinGothic-Light'; font-size:0.8vw;
+        }
+        #news_infor span{
+            height:4vh;
+            font-family: 'YeolrinGothic-Light'; font-size:0.7vw;
+            color:#555;
+        }
 /* 우리법원 주요판결 */
     #t_news{
         width:22.3%; height:100%;
@@ -350,10 +382,20 @@ header{
         #verdict p{
             font-family: 'YeolrinGothic-Light'; font-size:1.3vw; font-weight: bold;
             margin-left:2%;
+            padding-top:3%;
         }
         #verdict_infor{
-            height:30vh; 
-            background-color:orchid;
+            height:30vh;
+            display: flex; flex-flow: column; justify-content: center; 
+        }
+        #verdict_infor p{
+            width:90%; height:4vh;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color:#555;
+            cursor: pointer;
+            font-family: 'YeolrinGothic-Light'; font-size:0.8vw;
         }
 /* 나의 사건 검색 */
     #f_news{
@@ -369,6 +411,7 @@ header{
         #affair p{
             font-family: 'YeolrinGothic-Light'; font-size:1.3vw; font-weight: bold;
             margin-left:2%;
+            padding-top:3%;
         }
         #affair_infor{
             height:30vh;
@@ -621,8 +664,7 @@ header{
                     background-color:#eb5e26; color:white;
                     text-align: center;
                     font-family: 'Pretendard-Regular';
-                    line-height:2.7vh;
-                    
+                    line-height:3vh;
                 }
     .menu_vowel{
         width:100%; height:10vh;
@@ -699,9 +741,14 @@ footer{
 }
     #foo_logo{
         width:13%;
+        padding-top:1.3%;
+    }
+    #foo_logo img{
+        cursor: pointer;
     }
     #personal_infor{
         width:40.7%;
+        display: flex; flex-flow: column; justify-content: center;
         color:#c2c2c2;
     }
         #pi1 ul,
@@ -710,28 +757,68 @@ footer{
             width:100%; height:3vh;
             display:flex;
         }
-        #pi1 > ul > li:nth-of-type(1){
-            font-family: 'Pretendard-Regular'; font-weight: bold;
+        #pi1 > ul > li:nth-of-type(1) a{
+            font-family: 'Pretendard-Regular'; font-weight: bold; font-size:0.8vw;
         }
         #pi1 > ul > li:nth-of-type(1) a{
             color: #00e4ff;
         }
         #pi1 > ul > li > a{
-            color:white; 
+            color: #c2c2c2;
             font-family: 'YeolrinGothic-Light';font-weight: normal; font-size:0.7vw;
         }
-
+        #pi1 ul li{
+            width:6vw;
+        }
+        #pi1 ul li:nth-of-type(1){
+            width:7vw;
+        }
+        #pi1 ul li:nth-of-type(2){
+            width:12vw;
+        }
+        
         #pi2 > p,
         #pi3 > p{
             font-family: 'YeolrinGothic-Light';font-weight: normal; font-size:0.7vw;
+            color: #c2c2c2;
         }
         #pi1 > h5{
             font-family: 'YeolrinGothic-Light'; font-weight: normal; font-size:0.7vw;
         }
     #whole_court{
         width:13%;
+        display: flex; flex-flow: column; justify-content: center;
     }
-        #social ul{
-            display:flex;
+        #court_select{
+            width:100%; height:5vh;
+            display: flex; justify-content: flex-end;
         }
+            #csbox{
+                width:8vw; height:3vh;
+                background: #333338; color:white;
+            }
+            #move{
+                width:2.5vw; height:3vh;
+                border:0;
+                background: #596470; color: #c2c2c2;
+                cursor: pointer;
+            }
+        #social ul{
+            width:100%;
+            display:flex; justify-content: flex-end; align-items: center;
+        }
+        #social ul li{
+            width:2vw;
+            cursor: pointer;
+        }
+        #social ul li:nth-of-type(1) img,
+        #social ul li:nth-of-type(2) img,
+        #social ul li:nth-of-type(3) img{
+            width:1.3vw;
+            filter:invert(1);
+        }
+        #social ul li:nth-of-type(1) img{
+            width:1.6vw;
+        }
+        
     
